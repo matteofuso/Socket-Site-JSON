@@ -1,0 +1,6 @@
+client-server -> Libro
+socket -> Libro
+code -> Esercizio preso da Visual Studio
+socket -> Libro
+stack -> Sezione Pila ISO OSI del sito
+server-room -> https://www.poweradmin.com/blog/recommended-server-room-temperature-and-humidity/
