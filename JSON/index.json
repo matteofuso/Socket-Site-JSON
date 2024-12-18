@@ -1,0 +1,38 @@
+{
+    "hero": {
+        "img": "images/code.png",
+        "title": "Le Socket"
+    },
+    "indexContent": [
+        {
+            "title": "In breve",
+            "description": "Una <strong>socket</strong> è un'interfaccia software che consente a due applicazioni di comunicare tra loro, tramite internet. Sta alla base della comunicazione di rete, in particolare nei protocolli applicativi come HTTP o FTP. Le socket sono fondamentali per la trasmissione di dati in architetture come Client-Server e Peer-to-Peer."
+        }
+    ],
+    "navigation": {
+        "title": "Scopri di più",
+        "cards": [
+            {
+                "image": "images/code.png",
+                "alt": "Codice di una socket",
+                "title": "Le Socket",
+                "description": "Scopri di più sul funzionamento di questo potente mezzo di comunicazione.",
+                "link": "socket.html"
+            },
+            {
+                "image": "images/stack.png",
+                "alt": "La pila ISO OSI",
+                "title": "La pila ISO OSI",
+                "description": "Scopri di più sul funzionamento di questo standard ampiamente adottato in tutto il mondo.",
+                "link": "iso-osi.html"
+            },
+            {
+                "image": "images/client-server.png",
+                "alt": "Esemplificazione dell'architettura Client-Server",
+                "title": "L'architettura Client-Server",
+                "description": "Scopri di più sul su questo paradigma base della comunicazione.",
+                "link": "client-server.html"
+            }
+        ]
+    }
+}
