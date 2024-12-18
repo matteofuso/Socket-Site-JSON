@@ -1,12 +1,25 @@
 const header = document.createElement("div");
 header.innerHTML = `<div class="navbar navbar-expand-lg sticky-top flex-column py-0">
+
+    <!-- Header -->
+
     <header class="bg-body py-3 border-bottom shadow-lg w-100" data-bs-theme="dark">
         <div class="container d-flex p-2 justify-content-between align-items-center">
+
+            <!-- Logo -->
+
             <a href="./" class="link-body-emphasis d-flex text-decoration-none align-items-center">
                 <i class="bi bi-ethernet mx-3 h2 my-0"></i>
                 <p class="h4 my-0">Socket</p>
             </a>
+
+            <!-- Theme and Navbar Toggler Container -->
+
             <div class="d-flex align-items-center">
+
+                <!-- Theme Toggler -->
+                <!-- Dropdown to toggle the theme -->
+
                 <div class="dropdown bd-mode-toggle">
                     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme"
                         type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
@@ -40,6 +53,9 @@ header.innerHTML = `<div class="navbar navbar-expand-lg sticky-top flex-column p
                         </li>
                     </ul>
                 </div>
+
+                <!-- Navbar Toggler -->
+
                 <button class="navbar-toggler mx-3 d-lg-none link-body-emphasis" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -48,6 +64,9 @@ header.innerHTML = `<div class="navbar navbar-expand-lg sticky-top flex-column p
             </div>
         </div>
     </header>
+
+    <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary py-0 shadow-lg w-100" data-bs-theme="dark">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
