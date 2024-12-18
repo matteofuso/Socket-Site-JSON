@@ -41,11 +41,14 @@ const indexContent = {
     }
 }
 
+// Load hero content
 const hero = document.getElementById("hero");
 hero.querySelector("h1").innerHTML = indexContent.hero.title;
 hero.style.backgroundImage = `url("${indexContent.hero.img}")`
 
+// Load index sections
 const sections = document.getElementById("sections")
+// Load every section from the list
 indexContent.indexContent.forEach((e) => {
     sections.innerHTML += `
         <div class="my-4">
@@ -54,12 +57,15 @@ indexContent.indexContent.forEach((e) => {
         </div>`;
 })
 
+// Load navigation cards title
 const navigationTitle = document.getElementById("navigation-title");
 navigationTitle.textContent = indexContent.navigation.title;
 
+// Load cards content
 const navigation_container = document.getElementById("navigation-container");
 const card_container = document.getElementById("card-container");
 navigation_container.querySelector("h3").textindexContent = indexContent.navigation.title;
+// Load every card from the list
 indexContent.navigation.cards.forEach((e) => {
     card_container.innerHTML += `
         <div class="card">

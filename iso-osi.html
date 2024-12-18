@@ -12,20 +12,26 @@
 </head>
 
 <body class="d-flex flex-column">
+    <!-- Placeholder for Header and Navbar -->
     <div id="header_nav_placeholder" data-selected-id="2"></div>
+    <!-- Main content -->
     <main class="container flex-grow-1 my-4">
         <h1 id="title">Caricamento ...</h1>
         <hr>
+        <!-- Sections -->
         <div id="sections"></div>
         <div class="my-4">
             <h3 id="osi-title">Caricamento ...</h3>
             <div class="row">
+                <!-- ISO OSI Stack Container -->
                 <nav class="col-12 col-lg-4 mb-3" id="osi-model">
                 </nav>
                 <div class="col-12 col-lg-8">
+                    <!-- Carousel with the levels of the stack -->
                     <div id="carouselExample" class="carousel slide h-100">
                         <div class="carousel-inner px-5" id="carousel-container">
                         </div>
+                        <!-- Carousel control icons -->
                         <button class="carousel-control-prev w-auto" type="button" data-bs-target="#carouselExample"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon inverse-color-filter" aria-hidden="true"></span>
@@ -33,20 +39,22 @@
                         </button>
                         <button class="carousel-control-next w-auto end-0" type="button"
                             data-bs-target="#carouselExample" data-bs-slide="next">
-                        <button class="carousel-control-next w-auto end-0" type="button"
-                            data-bs-target="#carouselExample" data-bs-slide="next">
-                            <span class="carousel-control-next-icon inverse-color-filter" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <button class="carousel-control-next w-auto end-0" type="button"
+                                data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon inverse-color-filter" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <!-- Placeholder for Footer -->
+    <div id="footer_placeholder"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <div id="footer_placeholder"></div>
     <script src="scripts/loadHeaderNav.js"></script>
     <script src="scripts/loadFooter.js"></script>
     <script src="scripts/loadIsoOsi.js"></script>

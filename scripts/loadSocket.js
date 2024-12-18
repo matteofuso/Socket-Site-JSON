@@ -109,13 +109,15 @@ const socketContent = {
     }
 }
 
+// Load page title
 const title = document.querySelector('#title');
 title.innerHTML = socketContent.title;
-document.title += " - " + socketContent.title;
 
+// Load page sections
 const sections = document.getElementById("sections");
 socketContent.sections.forEach((section) => {
-  content = `<div class="row align-items-center">
+    // Load section content, load image if present
+    content = `<div class="row align-items-center">
               <h3>${section.title}</h3>
               ${section.image ? '<div class="col-12 col-xl-5">\
                   <img src="' + section.image + '" class="img-fluid rounded my-2">\
@@ -124,17 +126,22 @@ socketContent.sections.forEach((section) => {
                   ${section.description.startsWith("<p>") ? section.description : "<p>" + section.description + "</p>"}
               </div>
             </div>`
-  sections.innerHTML += content;
+    // Append content to sections
+    sections.innerHTML += content;
 });
 
+// Load typologies
+// Load title and description
 const tipologie = document.getElementById("tipologie");
 tipologie.querySelector("h3").innerHTML = socketContent.tipologie.title;
 tipologie.querySelector("p").innerHTML = socketContent.tipologie.description;
 const mainAccordition = document.createElement("div");
 mainAccordition.className = "accordion";
 mainAccordition.id = "tipologie-accordition";
+// Load accordition items
 socketContent.tipologie.accordition.forEach((tipologia) => {
     accorditionId = tipologia.title.toLowerCase().replaceAll(" ", "-");
+    // Create accordition item structure
     accordition = `<div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button ${tipologia.open ? "" : "collapsed"}" type="button" data-bs-toggle="collapse"
@@ -153,11 +160,14 @@ socketContent.tipologie.accordition.forEach((tipologia) => {
                         </div>
                     </div>
                 </div>`;
+    // Append accordition to mainAccordition
     mainAccordition.innerHTML += accordition;
+    // If there are subaccorditions, load them
     if (tipologia.subaccorditions.length > 0) {
         const subAccordition = mainAccordition.querySelector(`#${accorditionId}-subaccordition`);
         tipologia.subaccorditions.forEach((subTipologia) => {
             accorditionId = subTipologia.title.toLowerCase().replaceAll(" ", "-");
+            // Create subaccordition item structure
             subAccordition.innerHTML += `<div class="accordion-item">
                                             <h2 class="accordion-header">
                                                 <button class="accordion-button ${subTipologia.open ? "" : "collapsed"}" type="button" data-bs-toggle="collapse"
@@ -178,12 +188,15 @@ socketContent.tipologie.accordition.forEach((tipologia) => {
         });
     }
 });
+// Append mainAccordition to tipologie
 tipologie.appendChild(mainAccordition);
 
+// Load communication process content
 const processo = document.getElementById("processo");
 processo.querySelector("h3").innerHTML = socketContent.processo.title;
 processo.querySelector("p").innerHTML = socketContent.processo.description;
 
+// Load server and client list
 const list = document.createElement("ul");
 socketContent.processo.list.forEach((actor) => {
     const actorList = document.createElement("li");
@@ -197,5 +210,6 @@ socketContent.processo.list.forEach((actor) => {
     actorList.appendChild(sublist);
     list.appendChild(actorList);
 });
+
+// Append list to the page
 processo.appendChild(list);
-console.log(socketContent.processo.disclaimer);

@@ -84,6 +84,8 @@ const pages = [
 const header_nav_placeholder = document.getElementById(
   "header_nav_placeholder"
 );
+
+// Dinamically load the pages in the navbar
 const selected_id = header_nav_placeholder.getAttribute("data-selected-id");
 const navbar = header.querySelector("nav ul");
 pages.forEach((page, index) => {
@@ -100,4 +102,9 @@ pages.forEach((page, index) => {
   li.appendChild(a);
   navbar.appendChild(li);
 });
+
+// Dinamically load the title
+document.title = "Socket - " + pages[selected_id].title;
+
+// Replace the header_nav_placeholder with the header and navbar
 header_nav_placeholder.replaceWith(header.firstChild);

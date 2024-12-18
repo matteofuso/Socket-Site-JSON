@@ -69,12 +69,15 @@ const clientServerContent = {
   },
 };
 
+// Load page title
 const title = document.getElementById("title");
 title.textContent = clientServerContent.title;
-document.title += " - " + clientServerContent.title;
 
+// Load page sections
 const sections = document.getElementById("sections");
+// Load every section from the list
 clientServerContent.sections.forEach((section) => {
+  // Load section content, load image if present
   content = `<div class="row align-items-center">
               <h3>${section.title}</h3>
               ${section.image ? '<div class="col-12 col-xl-5">\
@@ -87,13 +90,17 @@ clientServerContent.sections.forEach((section) => {
   sections.innerHTML += content;
 });
 
+// Load advantages title
 const advantagesTitle = document.getElementById("advantages-title");
 advantagesTitle.textContent = clientServerContent.advantages.title;
 
+// Load advantages description
 const advantagesDescription = document.getElementById("advantages-description");
 advantagesDescription.innerHTML = clientServerContent.advantages.description;
 
+// Load advantages list
 const advantagesList = document.getElementById("advantages-list");
+// Load every advantage from the list
 clientServerContent.advantages.list.forEach((advantage) => {
   content = `<li class="list-group-item list-group-item-action"><strong>${advantage.title}</strong><br>
               ${advantage.description}  
@@ -101,5 +108,6 @@ clientServerContent.advantages.list.forEach((advantage) => {
   advantagesList.innerHTML += content;
 });
 
+// Load advantages image
 const advantagesImage = document.getElementById("advantages-image");
 advantagesImage.src = clientServerContent.advantages.image;

@@ -1,3 +1,4 @@
+/* Edit bootstrap variable for a specific button */
 .btn-bd-primary {
   --bd-violet-bg: #712cf9;
   --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
@@ -15,27 +16,27 @@
   --bs-btn-active-border-color: #5a23c8;
 }
 
+/* Always show dark mode toggle button */
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
 
-body{
+/* 
+Set the body min height to the height of the browser
+to avoid floating footer
+*/
+body {
   min-height: 100vh;
 }
 
+/* Offset for # navigation */
 :target {
   scroll-margin-top: 11rem;
 }
 
-@media (max-width: 992px) {
-
-  .top-min{
-    top: 6rem;
-  }
-}
-
+/* Custom size for small devices */
 @media (max-width: 576px) {
-  .index-hero{
+  .index-hero {
     height: 30vh !important;
   }
 
@@ -44,30 +45,35 @@ body{
   }
 }
 
-.inverse-color-filter{
+/* Inverse color filter for slideshow commands */
+.inverse-color-filter {
   filter: invert(1) grayscale(100) !important;
 }
-
-[data-bs-theme=dark] .inverse-color-filter{
+[data-bs-theme=dark] .inverse-color-filter {
   filter: none !important;
 }
 
-.fit-cover{
+/* Object fit rule for images in cards */
+.fit-cover {
   object-fit: cover;
 }
 
-.card{
+/* Custom card size */
+.card {
   width: 18rem;
 }
 
-.index-hero{
+/* Hero background image and size */
+.index-hero {
   height: 45vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-image: url("../images/code.png");
 }
 
-.index-hero > div{
+/* Hero overlay */
+.index-hero>div {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
 }

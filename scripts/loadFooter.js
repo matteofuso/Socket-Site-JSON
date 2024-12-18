@@ -10,5 +10,6 @@ footer.innerHTML = `<div class="bg-body-tertiary shadow-lg" data-bs-theme="dark"
     </footer>
 </div>`;
 
+// Replace the footer_placeholder with the footer
 const footer_placeholder = document.getElementById('footer_placeholder');
 footer_placeholder.replaceWith(footer.firstChild);
